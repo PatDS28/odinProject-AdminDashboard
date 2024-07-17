@@ -1,10 +1,14 @@
+body{
+  padding: 0;
+  margin: 0;
+}
 .main-container{
   width: 100%;
   height: 100vh; /* 100% of the viewport height */
   background-color: lightblue; /* Optional: for visual reference */
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 0.5fr 5fr;
+  grid-template-rows: 1fr 5fr;
 
   grid-template-areas: 
   "sidebar header"
@@ -44,10 +48,60 @@
 }
 .header{
   grid-area: header;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "search-bar account-info"
+  "name-container button-container";
+  
+}
+.searchbar{
+  grid-area: search-bar;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1rem;
+
+}
+.searchbar input{
+  margin-left: 2%;
+  width: 80%;
+  border-radius: 20px;
+  padding: 8px;
+  background-color: rgb(226,232,240);
+  border-width: 0;
+}
+.account{
+  grid-area: account-info;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  
+}
+.account div i{
+  font-size: 2rem;
+}
+.account div img{
+  width: 3rem;
+}
+.hithere{
+  grid-area: name-container;
+}
+.crud-buttons{
+  grid-area: button-container;
 }
 .content{
   grid-area: content;
 }
 .main-container div{
   /* border: 1px solid black; */
+}
+.header div{
+  border: 1px solid black;
 }
