@@ -91,6 +91,9 @@ body{
 .account div i{
   font-size: 2rem;
 }
+.account div i:hover{
+  font-size: 2.5rem;
+}
 .account div img{
   width: 3rem;
 }
@@ -149,10 +152,13 @@ body{
 .crud-buttons button{
   background-color: rgb(25,146,212);
   color: white;
-  padding: 10px 40px;
+  padding: 15px 40px;
   border-radius: 20px;
   border-width: 0;
   margin: 0px 10px;
+}
+.crud-buttons button:hover{
+  background-color: rgb(21, 100, 143);
 }
 
 
@@ -160,8 +166,41 @@ body{
 /* --------------------------------*/
 .content{
   grid-area: content;
+  background-color: rgb(226,232,240);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* grid-template-rows: 0fr 0fr; */
+  grid-template-areas:
+  "projects announcement";
+  background-color: rgb(226,232,240);
+  /* height: 100vh; */
 }
-
+.projects{
+  display: flex;
+  flex-direction: column;
+}
+.projects h3{
+  padding-left: 1rem;
+  font-family: roboto;
+}
+.project-container{
+  display: grid;
+  padding: 0rem 1rem;
+  /* margin: 1rem; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+  background-color: rgb(226,232,240);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.project-container div{
+  background-color: white;
+  border-radius: 10px;
+}
+.content div{
+  border: 1px solid black;
+}
 .header div{
   /* border: 1px solid black; */
 }
