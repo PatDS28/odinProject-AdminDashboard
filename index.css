@@ -3,10 +3,51 @@
   height: 100vh; /* 100% of the viewport height */
   background-color: lightblue; /* Optional: for visual reference */
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-}
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 0.5fr 5fr;
 
+  grid-template-areas: 
+  "sidebar header"
+  "sidebar content";
+}
+.sidebar{
+  grid-area: sidebar;
+  /* padding: 5%; */
+  background-color: rgb(25,146,212);
+}
+.title{
+  display: flex;
+  justify-content: start;
+  align-items: start ;
+  color: white;
+}
+.title h1{
+  font-size: 2rem;
+  font-family: Roboto;
+}
+.title img{
+  width: 5rem;
+}
+.links{
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  /* padding-right: 1rem; */
+}
+.links div{
+  font-size: 1.5rem;
+  font-family: Roboto;
+  padding: 1rem 0rem;
+  color: white;
+}
+.links i {
+  padding-right: 1.3rem;
+}
+.header{
+  grid-area: header;
+}
+.content{
+  grid-area: content;
+}
 .main-container div{
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
