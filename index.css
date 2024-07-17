@@ -78,11 +78,10 @@ body{
   grid-area: account-info;
   padding: 1rem;
   margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  
+  display: grid;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  grid-template-columns: 1fr 0.5fr 1fr;
+  /* grid-column-gap: 5px; */
 }
 .account div i{
   font-size: 2rem;
@@ -90,6 +89,27 @@ body{
 .account div img{
   width: 3rem;
 }
+.account div:nth-child(1){
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.account div:nth-child(2){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account div:nth-child(3){
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: roboto;
+  font-weight: bold;
+}
+
+
+
 .hithere{
   grid-area: name-container;
 }
@@ -99,9 +119,7 @@ body{
 .content{
   grid-area: content;
 }
-.main-container div{
-  /* border: 1px solid black; */
-}
+
 .header div{
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
