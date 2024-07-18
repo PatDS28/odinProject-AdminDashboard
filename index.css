@@ -200,11 +200,40 @@ body{
   background-color: white;
   border-radius: 10px;
   padding:1rem 1rem;
+  border-left:0.5rem solid #f0b429;
 }
+
 .project-container div h3 {
   padding: 0;
   margin: 0;
 }
+.announcement{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.announcement-container{
+  /* background-color: red; */
+  /* display: grid; */
+  /* grid-template-columns: 1fr; */
+  /* height: 100%; */
+  padding-bottom: 1rem;
+}
+.announcement-container div{
+  background-color: white;
+  padding:1rem 2rem;
+  border-radius: 10px;
+  /* padding-bottom: 0px; */
+}
+.announcement-container div p{
+  /* padding: 0;
+  margin: 0; */
+}
+.announcement-container h3{
+  padding-left: 1rem;
+  font-family: roboto;
+}
+
+
 .content div{
   /* border: 1px solid black; */
 }
